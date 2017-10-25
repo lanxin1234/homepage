@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+     <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <style>
+    body {
+        background: #eee;
+    }
+
+    table {
+        float: left;
+        margin: 100px 200px;
+    }
+
+    table,
+    tr,
+    td {
+        border: 1px solid #000;
+        border-collapse: collapse;
+    }
+
+    td {
+        width: 24px;
+        height:24px;
+        text-align: center;
+        font-size: 20px;
+        font-weight:bold;
+        color:#000;
+    }
+	h1{
+		/*width:100%;*/
+		margin:20px 20px;
+		text-align:center;
+	}
+	h2{
+		text-align:center;
+	}
+    .txt {
+        width: 600px;
+        /*height: 400px;*/
+        /*text-align:center;*/
+        margin: 50px 0px;
+        float: left;
+        border: 1px solid #000;
+    }
+    .txt p{
+    	text-indent: 2em;
+    }
+    a{
+    	position:relative;
+    	left:-140px;
+    	text-decoration:none;
+    	color:#000;
+    }
+    .btn-primary{
+    	float:right;
+    	bottom:-468px;
+    	left:-1042px;
+    	/*margin-right:10px;*/
+    }
+    .btn-success{
+    	float:left;
+    	bottom:-500px;
+    	left:-1108px;
+    }
+    </style>
+</head>
+
+<body>
+<h1>简单贪吃蛇小游戏</h1>
+    <div id="app"></div>
+    <div class="txt">
+    <h2>游戏逻辑思路</h2>
+    <ol>
+    	<li>
+    		<h4>创建类</h4>
+    		<ul type="square">
+    			<li>创建表格，目的画线分割</li>
+    			<li>创建地图div，让蛇在上面移动</li>
+    			<li>创建所有的块，蛇头、身体、食物</li>
+    		</ul>
+    	</li>
+    	<li>
+    		<h4>初始化状态</h4>
+    		<ul type="square">
+    			<li>蛇头、身体、食物随机产生坐标</li>
+    			<li>设置蛇头的初始方向</li>
+    			<li>设置按键改变蛇头方向</li>
+    			<li>开启定时器，自动移动蛇头</li>
+    		</ul>
+    	</li>
+    	<li>
+    		<h4>临界点的值</h4>
+    		<ul type="square">
+    			<li>判断是否吃到食物（蛇头的left和top等于食物的left和top）</li>
+    			<li>碰撞则随机产生食物（随机坐标）</li>
+    			<li>把新的身体移动到蛇头的后边，通过函数改变style.left和top的值</li>
+    			<li>判断蛇头有没有出边界（判断头部的top和style坐标）</li>
+    			<li>判断食物和身体不能重叠（身体和食物的坐标进行判断）</li>
+    		</ul>
+    	</li>
+    </ol>
+    </div>
+    <div class="footer">
+    	<a href="http://blog.csdn.net/u012054869/article/details/51734537">参考博客链接 -->></a>
+    </div>
+    <div class="again">
+    	<a href="snake.html" class="btn btn-success" role="button">再玩一次</a>
+    	<a href="index.html" class="btn btn-primary" role="button">回到首页</a>
+    </div>
+    <script src="js/Game.js"></script>
+    <script src="js/Snake.js"></script>
+    <script src="js/Food.js"></script>
+       <script src="js/jquery-1.12.4.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+    var game = new Game();
+    </script>
+</body>
+
+</html>

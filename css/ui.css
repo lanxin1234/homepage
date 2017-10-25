@@ -1,0 +1,265 @@
+ body,
+ div {
+     margin: 0;
+     padding: 0;
+ }
+
+ body {
+     overflow: hidden;
+ }
+
+ #doc {
+     min-width: 900px;
+     font: 12px/1.5 tahoma, arial;
+     color: #fff;
+ }
+
+ #topPanel {
+     background: #2899f6;
+     border-bottom: 1px solid ##2899f6;
+     height: 68px;
+     position: relative;
+     z-index: 3;
+ }
+
+ #logo {
+     background: url(../images/new_logo.png) no-repeat 0 0;
+     float: left;
+     height: 58px;
+     margin: 6px 40px 0 20px;
+     overflow: hidden;
+     text-indent: 100%;
+     white-space: nowrap;
+     width: 58px;
+     border-radius: 50%;
+ }
+
+ a {
+     color: #0068b7;
+     outline: none;
+     text-decoration: none;
+ }
+
+ #user {
+     float: right;
+     height: 36px;
+     padding: 15px 30px 0 0;
+     position: relative;
+     z-index: 2;
+     zoom: 1;
+ }
+
+ #leftPanel {
+     height: 304%;
+     background-color: #1f2631;
+     bottom: 0;
+     font-family: "Microsoft Yahei";
+     left: 0;
+     position: absolute;
+     top: 67px;
+     width: 199px;
+     z-index: 11;
+ }
+
+ #mainTabs {
+     margin-left: 200px;
+     position: relative;
+     z-index: 1;
+ }
+
+ #search-bar {
+     background: #fff;
+     height: 30px;
+     position: absolute;
+     right: 20px;
+     top: 10px;
+     width: 210px;
+     z-index: 11;
+ }
+
+ #search-text {
+     width: 200px;
+     height: 25px;
+     border: 0 none;
+     outline: medium none;
+     font-size: 12px;
+     font-family: "Microsoft Yahei";
+     padding-left: 8px;
+ }
+
+ #toolbar {
+     background: #fff;
+     border-bottom: 1px solid #e5ebf1;
+     height: 50px;
+     position: relative;
+     z-index: 10;
+     zoom: 1;
+ }
+
+ .ui-accordion .ui-accordion-content {
+     padding: 0;
+ }
+
+ .btn {
+     list-style-type: none;
+     margin: 0;
+     padding: 0;
+     width: 100%;
+ }
+
+ .btn li {
+     margin: 0 3px 3px 3px;
+     padding: 0.4em;
+     padding-left: 1.5em;
+     font-size: 1.4em;
+     height: 18px;
+ }
+
+ #btn-group {
+     float: left;
+     padding: 10px 24px;
+     overflow: hidden;
+     clear: both;
+     zoom: 1;
+ }
+
+ #space-box {
+     left: 0;
+     position: absolute;
+     width: 90%;
+     bottom: 34px;
+     padding: 10px;
+ }
+
+ #space-content span {
+     font-size: 16px;
+     font-family: "Microsoft Yahei";
+ }
+
+ #filelist {
+     padding: 20px 0 0 24px;
+ }
+
+ #sortable {
+     list-style-type: none;
+     margin: 0;
+     padding: 0;
+     width: 90%;
+ }
+
+ #sortable li {
+     margin: 3px 10px 10px 0;
+     padding: 1px;
+     float: left;
+     width: 400px;
+     height: 150px;
+     line-height: 150px;
+     margin-right: 3px;
+     margin-left: 32px;
+     font-size: 2em;
+     text-align: center;
+ }
+
+ #trash {
+           /* float: right; */
+           position: fixed;
+           right: -48px;
+           bottom: 0px;
+           width: 24%;
+           min-height: 20em;
+           padding: 1%;
+           margin-right: 56px;
+           margin-bottom: 9px;
+           list-style-type: none;
+ }
+
+ #trash li {
+     margin: 3px 10px 10px 0;
+     padding: 1px;
+     float: left;
+     width: 100px;
+     height: 100px;
+     line-height:100px;
+     font-size: 1em;
+     text-align: center;
+ }
+
+ #trash h4 {
+     line-height: 16px;
+     margin: 0 0 0.4em;
+ }
+
+ #trash h4 .ui-icon {
+     float: left;
+ }
+
+ .ui-menu {
+     width: 150px;
+ }
+
+ #menu {
+     position: absolute;
+ }
+
+ #menu a {
+     font-size: 12px;
+     font-family: "Microsoft Yahei";
+ }
+
+ .user {
+     color: #fff;
+     font-size: 24px;
+     position: relative;
+     top: 14px;
+     left: -15px;
+ }
+
+ .ui-state-default a,
+ .ui-state-default a:link,
+ .ui-state-default a:visited {
+     font-size: 16px;
+     font-weight: normal;
+ }
+
+ .ui-widget-content {
+     /*color: #000000;*/
+     background: #1f2631;
+ }
+
+ .ui-state {
+     background: rgba(0, 0, 0, 0);
+     color: #fff;
+ }
+
+ .ui-accordion .ui-accordion-header {
+     background: #283340;
+ }
+
+ .ui-accordion .ui-accordion-header {
+     color: #fff;
+ }
+
+ .huishouzhan {
+     background: #d4d4d4;
+ }
+
+ .tiao {
+     background: #f2f2f2;
+ }
+
+ #miaoshu{
+    /*position:relative;*/
+    position: fixed;
+    float:right;
+    top: 142px;
+    right: 10px;
+    width: 400px;
+    height:200px;
+    color:#000;
+ }
+ .data{
+    width:200px;
+    position: absolute;
+    top: 6px;
+    right: 158px;
+ }

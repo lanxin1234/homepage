@@ -1,0 +1,270 @@
+* {
+    box-sizing: border-box;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+body {
+    background: #eee url("../images/bg.jpg") 0px -200px;
+    background-attachment: fixed;
+}
+
+.quchufudong {
+    /*overflow:hidden;*/
+    position: relative;
+}
+
+.inner_c {
+    width: 1000px;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.top {
+    position: relative;
+}
+
+.navbar>.container .navbar-brand,
+.navbar>.container-fluid .navbar-brand {
+    color: #fff;
+}
+
+.nav>li>a:focus,
+.nav>li>a {
+    color: #fff;
+}
+
+.nav>li>a:focus,
+.nav>li>a:hover {
+    background: rgba(0,0,0,0.2);
+    color: #fff;
+}
+i.hot{
+    font-size: 20px;
+    color:red;
+}
+.navbar-form .form-control {
+    border-radius: 32px;
+}
+
+.navbar-nav>li>.dropdown-menu {
+    position: absolute;
+    top: 48px;
+    left: 0px;
+}
+.dropdown-menu span{
+  position:relative; 
+  animation: dong .5s linear 0s infinite;
+}
+@-webkit-keyframes dong {
+    0% {
+        transform: translateX(0px);
+    }
+    50% {
+        transform: translateX(5px);
+    }
+    100% {
+        transform: translateX(0px);
+    }
+}
+
+section h3.mbr-section-title {
+    font-size: 68px;
+    color: #fff;
+    line-height: 140px;
+    padding: 51px 0px 0px;
+}
+
+section.info p {
+    font-size: 24px;
+    line-height: 40px;
+    color: #fff;
+}
+
+section p:last-child {
+    padding: 40px 0px;
+}
+
+.container-fluid .row section img {
+    width: 500px;
+}
+
+.xiajiantou {
+    width: 50px;
+    height: 50px;
+    position: relative;
+    top: -10px;
+    left: 300px;
+    animation: mymove 1s linear 0s infinite;
+    border-radius: 5px;
+}
+
+.xiajiantou a i {
+    position: relative;
+    font-size: 30px;
+    font-weight: bold;
+    padding: 10px;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+@-webkit-keyframes mymove {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(10px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+.contain {
+    width: 100%;
+    height: 500px;
+    padding: 10px 100px;
+    background: #fff;
+    text-align: center;
+}
+
+.contain h3 {
+    padding: 50px;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.contain .diantai .container-fluid .row>div div {
+    text-align: center;
+    margin-right: 10px;
+    border: 1px solid #000;
+    height: 380px;
+    margin-bottom: 40px;
+}
+
+@media screen and (max-width: 900px) {
+    .contain .diantai .container-fluid .row>div div {
+        height: 500px;
+    }
+}
+
+.contain .diantai .container-fluid .row>div:last-child {
+    margin-right: 0px;
+}
+
+.contain .diantai .container-fluid .row>div img {
+    width: 100%;
+}
+
+.contain .diantai .container-fluid .row>div a {
+    font-size: 22px;
+    font-weight: bold;
+    color: #337ab7;
+}
+
+.contain .diantai .container-fluid .row>div small {
+    font-size: 16px;
+    color: #777;
+}
+
+.contain .diantai .container-fluid .row>div p {
+    color: #555;
+    font-size: 14px;
+    line-height: 30px;
+    padding: 10px 20px;
+}
+
+div.news {
+    width: 100%;
+    height: 400px;
+    text-align: center;
+    color: #000;
+}
+
+div.news div.zixun h4 {
+    padding: 50px;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    color: #000;
+}
+
+div.list-group a {
+    font-size: 18px;
+    height: 200px;
+    padding: 20px 20px;
+    color: #000;
+}
+
+@media screen and (max-width: 900px) {
+    div.list-group a {
+        font-size: 14px;
+        height: 340px;
+        margin-bottom: 20px;
+    }
+}
+
+div.list-group a img {
+    width: 200px;
+    height: 150px;
+    float: left;
+    margin-right: 40px;
+}
+div.list-group a h5 {
+    font-size: 20px;
+    float: left;
+}
+
+/*@media screen and (max-width: 900px) {
+    div.list-group a h5 {
+        font-size: 16px;
+        height:50px;
+       /* text-wrap:normal;
+        word-wrap: break-word;
+        float: right;
+        top: 0px;*/
+    }
+}
+*/
+div.list-group a p {
+    float:left;
+    text-indent: 2em;
+    font-size: 18px;
+    color: #555;
+}
+
+@media screen and (max-width: 900px) {
+    div.list-group a p {
+        font-size: 14px;
+    }
+}
+
+div.news div.zixun span {
+    cursor: pointer;
+    font-size: 18px;
+    line-height:100px;
+}
+
+footer {
+    float: left;
+    bottom: 0px;
+    width: 100%;
+    height: 60px;
+    margin-top: 220px;
+    color: #fff;
+    padding: 20px 20px;
+    background: rgba(0, 0, 0, 0.6);
+    clear: both;
+}
+
+footer h3 {
+    float: left;
+}
+
+footer span {
+    float: right;
+    margin-left: 20px;
+}

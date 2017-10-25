@@ -1,0 +1,159 @@
+
+body {
+    background: #eee;
+    width:100%;
+    height: 100%;
+}
+*{
+	margin: 0;
+	padding: 0;
+}
+.inner_c{
+	width:80%;
+	/*height:1730px;*/
+	margin:0 auto;
+	/*text-align:center;*/
+	 overflow:hidden;
+	 /*border: 1px solid #000;*/
+	 background:#fff;
+}
+div.top{
+	width:100%;
+	padding:10px 0px;
+	background:#fff;
+}
+.top .form-group{
+	margin-right:20px;
+}
+.top .form-group span{
+	position:relative;
+	left: -20px;
+	top:4px;
+	color:#aaa;
+}
+a .faxian{
+	position:relative;
+	top: -1px;
+	font-weight:bold;
+	margin-right: 40px;
+	margin-right: 30px;
+}
+.huati{
+	font-size:16px;
+	position:relative;
+	top:2px;
+}
+.top button{
+	float:right;
+	width: 80px;
+	margin-top:10px;
+	margin-right:20px;
+}
+.contain{
+	margin-top:40px;
+	height:650px;
+	border: 1px solid #ddd;
+	border-radius:5px;
+}
+.contain .container-fluid .row .left{
+	border-right:1px solid #ccc;
+	height:650px;
+}
+.contain .container-fluid .row .left .title{
+	width: 104%;
+	position:relative;
+	left: -16px;
+	padding:20px 20px;
+	padding-right:0px;
+	height:60px;
+	border-bottom:1px solid #ddd;
+}
+.contain .container-fluid .row .left .title h4{
+	float:left;
+}
+.contain .container-fluid .row .left .title div.hd{
+	float:right;
+}
+.contain .container-fluid .row .left .title div.hd span{
+	float:left;
+	position:relative;
+	bottom:-16px;
+	font-size: 16px;
+	margin-right:20px;
+	color:#666;
+}
+.contain .container-fluid .row .left .title div.hd span.cur{
+	color:#333;
+	font-weight:bold;
+	border-bottom:2px solid #155faa;
+}
+.contain .container-fluid .row .bd{
+	position:absolute;
+	top: 60px;
+}
+.contain .container-fluid .row .right .right_top{
+	height:60px;
+	line-height:60px;
+	text-align:center;
+	border-bottom:1px solid #eee;
+}
+.contain .container-fluid .row .right .right_top a {
+	float:left;
+	position:relative;
+	bottom: -22px;
+} 
+.contain .container-fluid .row .right .right_top span{
+	float:right;
+	font-size: 12px;
+	color:#155faa;
+} 
+.contain .container-fluid .row .right .right_contain{
+	padding:10px 0px;
+}
+.contain .container-fluid .row .right .right_contain a {
+	float:left;
+	position:relative;
+	bottom: 0px;
+} 
+.contain .container-fluid .row .right .right_contain span{
+	float:right;
+	font-size: 12px;
+	color:#155faa;
+} 
+.bd .neirong{
+	/*overflow: hidden;*/
+	width: 224%;
+	height: 84px;
+	position:relative;
+	padding:10px;
+	left: -20px;
+	margin-bottom:10px;
+	/*border-bottom:1px solid #eee;*/
+}
+.bd .neirong img{
+	float:left;
+	width:50px;
+	height:50px;
+}
+.bd .neirong h5{
+	float:left;
+	font-size:16px;
+	padding:10px;
+}
+
+.bd .list{
+	width:100%;
+	position:relative;
+	float:left;
+	margin-bottom: 32px;
+	padding-bottom: 10px;
+	/*border: 1px solid #eee;*/
+}
+.bd .neirong .list span{
+	width: 146%;
+	position:absolute;
+	bottom: -8px;
+	font-size: 14px;
+	left: 76px;
+	color:#a29898;
+}

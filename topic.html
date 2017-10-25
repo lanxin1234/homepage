@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myapp">
+
+<head>
+    <meta charset="UTF-8">
+    <title>讨论社区</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main-topic.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="fonts/iconfont.css">
+    <style>
+
+    </style>
+</head>
+<style>
+</style>
+
+<body>
+    <div class="top ">
+        <div class="inner_c">
+            <form class="navbar-form navbar-left" role="search">
+
+                <div class="form-group ">
+                    <input type="text" class="form-control" placeholder="搜索问题、话题或人"><span class="glyphicon glyphicon-search"></span>
+                </div>
+                <a href="#">
+                   <span class="glyphicon glyphicon-th-list" aria-hidden="true"></span>
+                   <span class="faxian">发现</span></a>
+                <a href="#">
+                    	 <span class="glyphicon glyphicon-comment huati" aria-hidden="true"></span>
+                    <span > 话题</span>
+                    </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <a href="index.html">
+                         <span class="glyphicon glyphicon-home" aria-hidden="true"></span>
+                    <span> 回到首页</span>
+                    </a>
+            </form>
+            <button type="button" class="btn btn-success">注册</button>
+            <button type="button" class="btn btn-primary">登录</button>
+        </div>
+    </div>
+    <section class="contain inner_c">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-8 left">
+                    <div class="title">
+                        <h4><span class="glyphicon glyphicon glyphicon-list" aria-hidden="true"></span> 发现</h4>
+                        <div ng-controller="MainCtrl as mainctrl">
+                            <div class="hd">
+                                <div>
+                                    <span ng-class="{'cur' : mainctrl.now == '最新'}" ng-click="mainctrl.change('最新')">最新</span>
+                                    <span ng-class="{'cur' : mainctrl.now == '推荐'}" ng-click="mainctrl.change('推荐')">推荐</span>
+                                    <span ng-class="{'cur' : mainctrl.now == '热门'}" ng-click="mainctrl.change('热门')">热门</span>
+                                    <span ng-class="{'cur' : mainctrl.now == '等待回复'}" ng-click="mainctrl.change('等待回复')">等待回复</span>
+                                </div>
+                            </div>
+                            <div class="bd">
+                                <div ng-show="mainctrl.now == '最新'" class="neirong">
+                                    <div class="list">
+                                        <img src="images/avatar-max-img.png" alt="这是一个头像">
+                                        <h5>前端工程师必读书籍有哪些值得推荐？</h5>
+                                        <span id="liulanliang"> • Omega 发起了问题 • 1 人关注 • 0 个回复 • 284 次浏览 • 2017-10-07 15:47</span>
+                                    </div>
+
+                                    <div class="list">
+                                        <img src="images/avatar-max-img.png" alt="这是一个头像">
+                                        <h5>前端工程师必读书籍有哪些值得推荐？</h5>
+                                        <span id="liulanliang"> • Omega 发起了问题 • 1 人关注 • 0 个回复 • 284 次浏览 • 2017-10-07 15:47</span>
+                                    </div>
+									 <div class="list">
+                                        <img src="images/avatar-max-img.png" alt="这是一个头像">
+                                        <h5>前端工程师必读书籍有哪些值得推荐？</h5>
+                                        <span id="liulanliang"> • Omega 发起了问题 • 1 人关注 • 0 个回复 • 284 次浏览 • 2017-10-07 15:47</span>
+                                    </div>
+                                    <div class="list">
+                                        <img src="images/avatar-max-img.png" alt="这是一个头像">
+                                        <h5>前端工程师必读书籍有哪些值得推荐？</h5>
+                                        <span id="liulanliang"> • Omega 发起了问题 • 1 人关注 • 0 个回复 • 284 次浏览 • 2017-10-07 15:47</span>
+                                    </div>
+                                    <div class="list">
+                                        <img src="images/avatar-max-img.png" alt="这是一个头像">
+                                        <h5>前端工程师必读书籍有哪些值得推荐？</h5>
+                                        <span id="liulanliang"> • Omega 发起了问题 • 1 人关注 • 0 个回复 • 284 次浏览 • 2017-10-07 15:47</span>
+                                    </div>
+                                    <div class="list">
+                                        <img src="images/avatar-max-img.png" alt="这是一个头像">
+                                        <h5>前端工程师必读书籍有哪些值得推荐？</h5>
+                                        <span id="liulanliang"> • Omega 发起了问题 • 1 人关注 • 0 个回复 • 284 次浏览 • 2017-10-07 15:47</span>
+                                    </div>
+
+                                </div>
+                                <div ng-show="mainctrl.now == '推荐'" class="neirong">
+                                    <div class="list">
+                                        <img src="images/avatar-max-img.png" alt="这是一个头像">
+                                        <h5>现在比较常用的前端框架有哪些？</h5>
+                                        <span id="liulanliang"> • Omega 发起了问题 • 1 人关注 • 0 个回复 • 284 次浏览 • 2017-10-07 15:47</span>
+                                    </div>
+                                     <div class="list">
+                                        <img src="images/avatar-max-img.png" alt="这是一个头像">
+                                        <h5>技术大牛们是怎么看砖头书的？</h5>
+                                        <span id="liulanliang"> • Omega 发起了问题 • 1 人关注 • 0 个回复 • 284 次浏览 • 2017-10-07 15:47</span>
+                                    </div>
+                                    <div class="list">
+                                        <img src="images/avatar-max-img.png" alt="这是一个头像">
+                                        <h5>用了react 或者 vue，如何做SEO优化呢？</h5>
+                                        <span id="liulanliang"> • Omega 发起了问题 • 1 人关注 • 0 个回复 • 284 次浏览 • 2017-10-07 15:47</span>
+                                    </div>
+                                </div>
+                                <div ng-show="mainctrl.now == '热门'" class="neirong">
+                                     <div class="list">
+                                        <img src="images/avatar-max-img.png" alt="这是一个头像">
+                                        <h5>用了react 或者 vue，如何做SEO优化呢？</h5>
+                                        <span id="liulanliang"> • Omega 发起了问题 • 1 人关注 • 0 个回复 • 284 次浏览 • 2017-10-07 15:47</span>
+                                    </div>
+                                    <div class="list">
+                                        <img src="images/avatar-max-img.png" alt="这是一个头像">
+                                        <h5>用了react 或者 vue，如何做SEO优化呢？</h5>
+                                        <span id="liulanliang"> • Omega 发起了问题 • 1 人关注 • 0 个回复 • 284 次浏览 • 2017-10-07 15:47</span>
+                                    </div>
+                                    <div class="list">
+                                        <img src="images/avatar-max-img.png" alt="这是一个头像">
+                                        <h5>用了react 或者 vue，如何做SEO优化呢？</h5>
+                                        <span id="liulanliang"> • Omega 发起了问题 • 1 人关注 • 0 个回复 • 284 次浏览 • 2017-10-07 15:47</span>
+                                    </div>
+                                    <div class="list">
+                                        <img src="images/avatar-max-img.png" alt="这是一个头像">
+                                        <h5>用了react 或者 vue，如何做SEO优化呢？</h5>
+                                        <span id="liulanliang"> • Omega 发起了问题 • 1 人关注 • 0 个回复 • 284 次浏览 • 2017-10-07 15:47</span>
+                                    </div>
+                                </div>
+                                <div ng-show="mainctrl.now == '等待回复'" class="neirong">
+                                     <div class="list">
+                                        <img src="images/avatar-max-img.png" alt="这是一个头像">
+                                        <h5>有哪些新手程序员不知道的小技巧？</h5>
+                                        <span id="liulanliang"> • Omega 发起了问题 • 1 人关注 • 0 个回复 • 284 次浏览 • 2017-10-07 15:47</span>
+                                    </div>
+                                     <div class="list">
+                                        <img src="images/avatar-max-img.png" alt="这是一个头像">
+                                        <h5>有哪些新手程序员不知道的小技巧？</h5>
+                                        <span id="liulanliang"> • Omega 发起了问题 • 1 人关注 • 0 个回复 • 284 次浏览 • 2017-10-07 15:47</span>
+                                    </div>
+                                     <div class="list">
+                                        <img src="images/avatar-max-img.png" alt="这是一个头像">
+                                        <h5>有哪些新手程序员不知道的小技巧？</h5>
+                                        <span id="liulanliang"> • Omega 发起了问题 • 1 人关注 • 0 个回复 • 284 次浏览 • 2017-10-07 15:47</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 right">
+                    <div class="right_top">
+                        <a href="#"><h5>热门话题</h5></a>
+                        <span>更多 ></span>
+                    </div>
+                    <div class="right_contain">
+                        <a href="#"><h5>热门话题</h5></a>
+                        <span>更多 ></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- js文件 -->
+    <script src="js/jquery-1.12.4.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.eraser.js"></script>
+    <script type="text/javascript" src="js/angular.min.js"></script>
+    <script src="js/main-topic.js"></script>
+    <script type="text/javascript">
+    var app = angular.module("myapp", []);
+
+    app.controller("MainCtrl", [function() {
+        this.now = "最新";
+
+        var self = this;
+        this.change = function(txt) {
+            self.now = txt;
+        };
+        console.log(4)
+    }]);
+    </script>
+</body>
+
+</html>

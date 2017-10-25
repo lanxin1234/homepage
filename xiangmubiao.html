@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>33_JQUERYUI网盘案例</title>
+    <script src="js/jquery-1.12.4.js"></script>
+    <script src="js/jquery-ui.js"></script>
+      <script src="js/jquery.ui.datepicker-zh-CN.js"></script>
+    <link rel="stylesheet" href="css/jquery-ui.css">
+    <link rel="stylesheet" href="css/ui.css">
+    <style>
+        
+    </style>
+</head>
+<body>
+    <div id="doc">
+        <div id="topPanel">
+            <a id="logo" href="#" title="表单首页"></a>
+            <a href="index.html"><span class="user">回到首页</span></a>
+            <p class="data">Date: <input type="text" id="datepicker"></p>
+            <div id="user">
+                <button>登录</button>
+                <button>注册</button>
+            </div>
+        </div>
+        <div id="leftPanel">
+            <div id="nav">
+                <h3>项目</h3>
+                <div>
+                    <ul class="btn">
+                        <li class="ui-state"><a href="#">我的项目</a></li>
+                        <li class="ui-state"><a href="#">关注的项目</a></li>
+                        <!-- <li class="ui-state"><a href="#">下属项目</a></li> -->
+                        <li class="ui-state"><a href="#">共享给我的项目</a></li>
+                        <li class="ui-state"><a href="#">创建的项目</a></li>
+                        <li class="ui-state"><a href="#">已完成的项目</a></li>
+                        <!-- <li class="ui-state"><a href="#">全部项目</a></li> -->
+                    </ul>
+                </div>
+                <h3>项目统计报表</h3>
+                <div>
+                    <ul class="btn">
+                        <li class="ui-state"><a href="#">HTML</a></li>
+                        <li class="ui-state"><a href="#">CSS</a></li>
+                        <li class="ui-state"><a href="#">JAVASCRIPT</a></li>
+                        <li class="ui-state"><a href="#">JQUERY</a></li>
+                        <li class="ui-state"><a href="#">AJAX</a></li>
+                        <li class="ui-state"><a href="#">SERVER</a></li>
+                        <li class="ui-state"><a href="#">WEBAPP</a></li>
+                    </ul>
+                </div>
+                <h3>回收站</h3>
+                <div>
+                    <ul class="btn">
+                        <li class="ui-state"><a href="#">HTML</a></li>
+                        <li class="ui-state"><a href="#">CSS</a></li>
+                        <li class="ui-state"><a href="#">JAVASCRIPT</a></li>
+                    </ul>
+                </div>
+                <h3>资源</h3>
+                <div>
+                    <ul class="btn">
+                        <li class="ui-state"><a href="#">HTML</a></li>
+                        <li class="ui-state"><a href="#">CSS</a></li>
+                        <li class="ui-state"><a href="#">JAVASCRIPT</a></li>
+                        <li class="ui-state"><a href="#">JQUERY</a></li>
+                        <li class="ui-state"><a href="#">AJAX</a></li>
+                        <li class="ui-state"><a href="#">SERVER</a></li>
+                        <li class="ui-state"><a href="#">WEBAPP</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div></div>
+        </div>
+        <div id="mainTabs">
+            <div id="search-bar" class="ui-state-default ui-corner-all">
+                <input id="search-text" placeholder="全局搜索">
+            </div>
+            <div id="toolbar">
+                <div id="btn-group">
+                    <!-- <button>分类</button> -->
+                    <button>新建文件夹</button>
+                    <button>排序</button>
+                    <button>删除</button>
+                    <button>筛选</button>
+                </div>
+            </div>
+            <div id="filelist">
+                <ul id="sortable">
+                    <li class="ui-state-default">问答社区项目总结</li>
+                    <li class="ui-state-default">微杂志项目总结</li>
+                    <li class="ui-state-default">个人笔记总结</li>
+                    <li class="ui-state-default">更多的项目</li>
+                    <li class="ui-state-default">更多的项目</li>
+                    <li class="ui-state-default">更多的项目</li>
+                    <!-- <li class="ui-state-default">7</li> -->
+                  <!--   <li class="ui-state-default">8</li>
+                    <li class="ui-state-default">9</li>
+                    <li class="ui-state-default">10</li>
+                    <li class="ui-state-default">11</li>
+                    <li class="ui-state-default">12</li> -->
+                </ul>
+                <div id="miaoshu" >
+                   <h1>按住鼠标，拖动文件夹，可将文件夹拖进回收站</h1> 
+                </div>
+                <ul id="trash" class="ui-state-default">
+                    <h4 class="ui-widget-header"><span class="ui-icon ui-icon-trash">回收站</span> 回收站</h4>
+                </ul>
+            </div>
+        </div>
+        <div id="userLogin" title="用户登录">
+            <form>
+                <table>
+                    <tr>
+                        <td>用户名:</td>
+                        <td><input type="text"></td>
+                    </tr>
+                    <tr>
+                        <td>密码:</td>
+                        <td><input type="password"></td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+        <div id="userRegist" title="用户注册">
+            <form>
+                <table>
+                    <tr>
+                        <td>用户名:</td>
+                        <td><input type="text"></td>
+                    </tr>
+                    <tr>
+                        <td>密码:</td>
+                        <td><input type="password"></td>
+                    </tr>
+                    <tr>
+                        <td>确认密码:</td>
+                        <td><input type="password"></td>
+                    </tr>
+                    <tr>
+                        <td>Email:</td>
+                        <td><input type="text"></td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+        <ul id="menu" style="display: none">
+            <li><a href="#">文件上传</a></li>
+            <li><a href="#">新建文件夹</a></li>
+            <li><a href="#">刷新</a></li>
+        </ul>
+    </div>
+    <script>
+        // 登录、注册按钮样式
+        $("button:lt(2)").button();
+        // 工具栏按钮样式
+        $("button:eq(2)").button({
+            icons : {
+                primary: "ui-icon ui-icon-arrowthick-1-n"
+            }
+        }).next().button({
+            icons : {
+                primary: "ui-icon ui-icon-folder-collapsed"
+            }
+        }).next().button({
+            icons : {
+                primary: "ui-icon ui-icon-arrowthick-1-s"
+            }
+        }).next().button({
+            icons : {
+                primary: "ui-icon ui-icon-trash"
+            }
+        }).next().button({
+            icons : {
+                primary: "ui-icon ui-icon-extlink"
+            }
+        }).next().button({
+            icons : {
+                primary: "ui-icon ui-icon-pencil"
+            }
+        });
+        // 左侧菜单样式
+        var icons = {
+            header: "ui-icon-circle-arrow-e",
+            activeHeader: "ui-icon-circle-arrow-s"
+        };
+        $( "#nav" ).accordion({
+            icons: icons
+        });
+        $( "#toggle" ).button().click(function() {
+            if ( $( "#nav" ).accordion( "option", "icons" ) ) {
+                $( "#nav" ).accordion( "option", "icons", null );
+            } else {
+                $( "#nav" ).accordion( "option", "icons", icons );
+            }
+        });
+        // 使用进度
+        $("#progressbar").progressbar({
+            value : 20
+        });
+        // 拖动文件
+		$("#sortable li").draggable({
+            revert: "invalid",
+            cursor: "move",
+            helper: "clone",
+            cursorAt: { top: 56, left: 56 }
+        });
+        // 回收站
+        $( "#trash" ).droppable({
+            accept: "#sortable > li",
+            activeClass: "ui-state-hover",
+            drop: function( event, ui ) {
+                deleteImage(ui.draggable);
+            }
+        });
+        function deleteImage($item){
+            $item.fadeOut(function(){
+                $item.appendTo($("#trash")).fadeIn(function(){
+                    $item.animate({
+                       width : 100
+                    });
+                });
+            });
+        }
+        // 自动提示
+        var availableTags = [
+            "ActionScript",
+            "AppleScript",
+            "Asp",
+            "BASIC",
+            "C",
+            "C++",
+            "Clojure",
+            "COBOL",
+            "ColdFusion",
+            "Erlang",
+            "Fortran",
+            "Groovy",
+            "Haskell",
+            "Java",
+            "JavaScript",
+            "Lisp",
+            "Perl",
+            "PHP",
+            "Python",
+            "Ruby",
+            "Scala",
+            "Scheme"
+        ];
+        $( "#search-text" ).autocomplete({
+            source: availableTags
+        });
+        // 登录和注册功能
+        $("#userLogin").dialog({
+            autoOpen : false,
+            modal : true,
+            width : 350,
+            buttons : {
+                "登录" : function(){
+                    $(this).dialog("close");
+                }
+            }
+        });
+        $("button:eq(0)").click(function(){
+            $("#userLogin").dialog("open");
+        });
+        $("#userRegist").dialog({
+            autoOpen : false,
+            modal : true,
+            width : 350,
+            buttons : {
+                "注册" : function(){
+                    $(this).dialog("close");
+                }
+            }
+        });
+        $("button:eq(1)").click(function(){
+            $("#userRegist").dialog("open");
+        });
+        // 自定义右键菜单
+        $(document).contextmenu(function (event) {
+            event.preventDefault();
+        });
+        $(document).mousedown(function (event) {
+            if(event.button == 2){
+                $( "#menu").removeAttr("style").menu().position({
+                    my: "left top",
+                    at: "left top",
+                    of : event,
+                    collision: "fit"
+                });
+            }else if(event.button == 0){
+                $("#menu").attr("style","display:none");
+            }
+        });
+        $("#datepicker").datepicker();
+    </script>
+</body>
+</html>

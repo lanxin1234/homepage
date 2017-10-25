@@ -1,0 +1,84 @@
+body{
+			padding-bottom:70px;
+		}
+    .navbar .container .navbar-collapse .ylbg li.txt{
+      position:relative;
+      overflow:hidden;
+
+    }
+    .navbar .container .navbar-collapse .ylbg li.txt.yinjie::before{
+        content: "";
+        position:absolute;
+        top:100%;
+        left:0px;
+        width:100%;
+        height:100%;
+        color: #E91E63;
+        background: #ffffff;
+        opacity:0.6;
+        transition:all 0.2s ease 0s;
+    }
+    .navbar .container .navbar-collapse .ylbg li.txt.yinjie:hover::before,.navbar .container .navbar-collapse .ylbg li.txt.yinjie.h::before{
+      top:0px;
+    }
+     .navbar .container .navbar-collapse span{
+      display:inline;
+      width:40px;
+      height:50px;
+      line-height:50px;
+      color:#9E9E9E;
+     }
+     .navbar .container .navbar-collapse span:hover{
+      color:#F44336;
+      cursor:pointer;
+     }
+     
+    /*Ã¨Â½Â®Ã¦â€™Â­Ã¥â€ºÂ¾Ã©Æ’Â¨Ã¥Ë†â€ Ã¦Â Â·Ã¥Â¼Â*/
+    .carousel{
+      height:500px;
+      width:100%;
+    }
+    .carousel .carousel-inner a img{
+      height:500px;
+      width:100%;
+    }
+    /*Ã¥â€ºÂ¾Ã§â€°â€¡Ã¤Â¿Â¡Ã¦ÂÂ¯Ã§Å¡â€žÃ¥Å’ÂºÃ¥Å¸Å¸*/
+     section{
+      /*width:80%;*/
+      margin:0 auto;
+     }
+     .info .item img{
+      width:140px;
+      height:140px;
+     }
+     .info .item  a{
+      margin-bottom:100px;
+     }
+     .info .item{
+      text-align:center;
+      margin-top:40px;
+      border-bottom:1px solid #ccc;
+     }
+      section.container{
+        margin-top:80px;
+    }
+    section.container div.row{
+        padding-bottom:80px;
+        padding-top:80px;
+        border-bottom:1px solid #ccc;
+        text-align:center;
+    }
+    section.container div.row .rightinfo1{
+		width:471px;
+		height:480px ;
+    background:#ddd;
+    vertical-align:middle;
+    margin:0 auto;
+	 }
+   /*footeræ ·å¼è®¾ç½®*/
+   footer.footer p{
+   padding-top:40px;
+   padding-right:0px;
+   padding-left:0px;
+   vertical-align:middle;
+   }

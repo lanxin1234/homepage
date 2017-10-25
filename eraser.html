@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+    .box {
+        position: relative;
+        width: 700px;
+        height: 438px;
+        margin: 20px auto;
+    }
+
+    .box img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 0;
+    }
+
+    #redux {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 2;
+    }
+
+    .box span.progress {
+        position: absolute;
+        top: 10px;
+        right: 20px;
+        z-index: 3;
+    }
+
+    .btn {
+        position: relative;
+        width: 500px;
+        height: 60px;
+        margin: 20px auto;
+    }
+
+    .btn span {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 66px;
+        height: 30px;
+        color: #fff;
+        line-height: 30px;
+        text-align: center;
+        background: #21B384;
+        cursor: pointer;
+    }
+
+    .btn span.reset {
+        left: 434px;
+    }
+
+    h1 {
+        width: 38%;
+        margin: 30px auto 60px;
+    }
+
+    .txt {
+        position: relative;
+        left: 50%;
+        margin-left: -11%;
+    }
+
+    p {
+        float: right;
+        position: relative;
+        top: -58px;
+        left: -500px;
+    }
+
+    a {
+        text-decoration: none;
+        color:#fff;
+    }
+    a:hover{
+    	text-decoration: none;
+    }
+
+    .btn span.fanhui {
+    	display: block;
+        position: relative;
+      /*float:left;*/
+        width: 66px;
+        height: 30px;
+        top: 50px;
+        right: 200px;
+        background:rgba(0,0,0,0.3);
+    }
+    </style>
+</head>
+
+<body>
+    <h1>jQuery橡皮擦插件jQuery.eraser演示</h1>
+    <p><a href="http://www.sucaihuo.com">参考来源-->素材火 http://www.sucaihuo.com</a></p>
+    <div class="box">
+        <img src="images/2.jpg" alt="" id="redux">
+        <img src="images/1.jpg" alt="">
+        <span class="progress">0%</span>
+    </div>
+    <div class="txt">请在图片中按住鼠标左键不放，并移动查看效果</div>
+    <div class="btn">
+        <span class="clear">清除</span>
+        <span class="reset">复位</span>
+        <span class="fanhui"><a href="faxian.html">返回首頁</a></span>
+    </div>
+    <script src="js/jquery-1.8.3.min.js"></script>
+    <script src="js/jquery.eraser.js"></script>
+    <script>
+    $(function() {
+        $("#redux").eraser({
+            //橡皮擦的大小，这里为整数
+            size: 100,
+            //擦出的比例，这里为浮点数
+            completeRatio: 1.00,
+            //配合completeRadio 使用，达到擦除比例后的函数
+            completeFunction: null,
+            //擦出后的回调函数，他接收一个参数，为擦出后的比率（0.0 – 1.0）
+            progressFunction: function(p) {
+                $(".progress").html(Math.round(p * 100) + "%");
+            }
+        });
+
+    });
+    $(".clear").on("click", function() {
+        //清除
+        $("#redux").eraser("clear");
+    });
+    $(".reset").on("click", function() {
+        //重置，即还原成未擦出的状态
+        $("#redux").eraser("reset");
+    })
+    </script>
+</body>
+
+</html>
