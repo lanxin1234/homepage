@@ -21,10 +21,14 @@
 			margin:100px 0px;
 			margin-left:-200px;
 		}
+        a{
+            font-size: 20px;
+        }
 	</style>
 	<script src="js/echarts.min.js"></script>
 </head>
 <body>
+<a href="faxian.html" id="ziyuanku">回到首页</a>
 <h1>echarts官方示例</h1>
 	<!-- 具有一个承载图表的盒子 -->
 	<div id="main" class="box"></div>
@@ -121,6 +125,11 @@
 };
 		// 使用刚指定的配置和数据显示图表
 		myChart1.setOption(option1);
+        //回到资源库的链接路由
+        // var a  = document.getElementById("ziyuanku");
+        // a.onclick = function(){
+        //     console.log(a.setAttribute("href","faxian.html"));
+        // }
 	</script>
 </body>
 </html>
