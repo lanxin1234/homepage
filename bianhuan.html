@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <style type="text/css">
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            background:#000;
+            overflow: hidden;
+        }
+        .box{
+            width:1000px;
+            height: 600px;
+            perspective:10000px;
+            margin:50px auto;
+            position: relative;
+            border: 1px solid #fff;
+        }
+        .box .unit{
+            width:1000px;
+            height: 500px;
+            transform-style:preserve-3d;
+            transform:scale(0.7) rotateX(-6deg) translateY(100px);
+        }
+        .box .unit>div{
+            position: absolute;
+            top:210px;
+            left:475px;
+            width:50px;
+            height:80px;
+            font-size: 20px;
+            line-height: 80px;
+            text-align: center;
+            color:#fff;
+            border: 1px solid #fff;
+            transition:all 2s ease 0s;
+        }
+        input{
+            margin-top: 40px;
+            width:80px;
+            height:40px;
+        }
+        h4{
+            margin-top: 10px;
+            color:#fff;
+        }
+        button{
+            margin-top: 40px;
+            width:80px;
+            height:40px;
+        }
+    </style>
+</head>
+<body>
+    <a href="index.html"><button>回到首页</button></a>
+    <input type="button" value="点击开始" />
+    <input type="button" value="螺旋型" />
+    <input type="button" value="粑粑型" />
+    <input type="button" value="矩阵型" />
+    <h4>点击开始后，需要加载一段时间....</h4>
+    <div class="box">
+        <div class="unit">
+
+        </div>
+    </div>
+</body>
+</html>
+<script type="text/javascript" src="js/jquery-1.12.4.js"></script>
+<script type="text/javascript">
+// 创建div
+    var arrColor = ["red","green","navy","purple","blue","skyblue","pink","yellowgreen","greenyellow","orange","gold","deeppink","brown","#f40","#064"];
+    for (var i = 0; i < 250; i++) {
+        $("<div></div>").css({"backgroundColor":arrColor[parseInt(Math.random()*arrColor.length)]}).appendTo(".unit");
+    };
+    // 变成球面
+    function setBall(){
+
+        for (var i = 0; i < 250; i++) {
+           // 层数  11层，一共250个div, 每一层是约等于23个div。
+            var cengshu = parseInt(i/23);
+            // 计算纬度
+            var  weiduArr = [90,80,60,40,20,0,-20,-40,-60,80,-90];
+            // 把每一层的23个div对应自己纬度的角度
+            var weidu = weiduArr[cengshu];
+            // 计算自己在纬度上转的角度，每个人要转：360/23;
+            var jiaodu = i%23 * (360/23);
+            // 把所有值反映到div上。
+            $(".box .unit>div").eq(i).css({
+                "transform":"rotateY("+jiaodu+"deg) rotateX("+weidu+"deg) translateZ(300px)"
+            });
+        };
+    };
+    // 粑粑形
+    function setluoxuan(){
+        for (var i = 0; i < 250; i++) {
+            $(".box .unit>div").eq(i).css({
+                "transform":"rotateY("+(i*6)+"deg) translateY("+(i*3-450)+"px) translateZ(560px)"
+            });
+        };
+    };
+    // 金字塔
+    function jinzita(){
+        for (var i = 0; i < 250; i++) {
+            $(".box .unit>div").eq(i).css({
+                "transform":"rotateY("+(i*6)+"deg) translateY("+(i*3-450)+"px) translateZ("+i*3+"px)"
+            });
+        };
+    };
+    // 矩阵
+    function juzhen(){
+        for (var i = 0; i < 250; i++) {
+            // 面的确定
+            var mian = parseInt(i/50);
+            // 面上的第几行
+            var hang =  parseInt((i - mian * 50)/10);
+            // 第几列
+            var lie =  i % 10;
+            // 反映到div上
+           $(".box .unit>div").eq(i).css({
+               "transform":"translateZ("+mian*100+"px) translateY("+(hang * 100-300)+"px) translateX("+(lie*100-450)+"px)"
+           });
+        };
+    }
+    // 让unit 旋转
+    var d = 0;
+    setInterval(function(){
+        d++;
+        $(".unit").css("transform","scale(0.7) rotateX(-6deg) translateY(100px) rotateY("+d+"deg)");
+    },50);
+    // 监听
+    $("input:eq(0)").click(setBall);
+    $("input:eq(1)").click(setluoxuan);
+    $("input:eq(2)").click(jinzita);
+    $("input:eq(3)").click(juzhen);
+</script>
