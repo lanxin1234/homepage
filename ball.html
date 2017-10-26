@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		body{
+			background-color: black;
+		}
+		.ball{
+			position: absolute;
+			width:60px;
+			height:60px;
+			background-color: blue;
+			border-radius: 50%;
+			opacity:0.5;
+			animation:faguang 0.6s ease 0s infinite alternate;
+		}
+
+		@-webkit-keyframes faguang{
+			from{
+				box-shadow: 0px 0px 0px yellow;
+			}
+			to{
+				box-shadow: 0px 0px 10px orange;
+			}
+		}
+	</style>
+</head>
+<body>
+	<section id="box"> 
+		 
+	</section>
+
+	<script type="text/javascript">
+		function Ball(x,y,r){
+			//圆心
+			this.x = x;
+			this.y = y;
+			//半径
+			this.r = r;
+			//运动的小增量
+			//为了保证dx和dy不都是0,都是0就不动了，所以我们加入do...while...验证。
+			do{
+				this.dx = parseInt(Math.random() * 9) - 4;
+				this.dy = parseInt(Math.random() * 9) - 4;
+			}while(this.dx == 0 && this.dy == 0);
+
+			//颜色数组
+			var colors = ["#FF9900","#FFFF00","#0099CC","#CC3399","#CC0066","#FF9999","#99CC33","#66CCCC","#99CCCC","#CC3399"];
+			//随机一个颜色
+			this.color = colors[parseInt(Math.random() * colors.length)];
+
+			//创建DOM和上树
+			this.init();
+
+			//把自己放入全局数组中
+			ballarr.push(this);
+		}
+		//初始化，创建DOM和上树
+		Ball.prototype.init = function(){
+			this.dom = document.createElement("div");
+			this.dom.className = "ball";
+			//上树
+			document.getElementById("box").appendChild(this.dom);
+			//设置初始位置
+			this.dom.style.left = this.x - this.r + "px";
+			this.dom.style.top = this.y - this.r + "px";
+			//设置初始宽度、高度
+			this.dom.style.width = this.r * 2 + "px";
+			this.dom.style.height = this.r * 2 + "px";
+			//设置颜色
+			this.dom.style.backgroundColor = this.color;
+		}
+		//更新方法，这个方法在每一帧执行
+		Ball.prototype.update = function(){
+			this.x += this.dx;
+			this.y += this.dy;
+			this.r --;
+			//验收，如果自己的半径小于0了，此时自杀
+			if(this.r < 0){
+				this.goDie();
+			}
+		 	this.dom.style.left = this.x - this.r + "px";
+		 	this.dom.style.top = this.y - this.r + "px";
+		 	this.dom.style.width = this.r * 2 + "px";
+		 	this.dom.style.height = this.r * 2 + "px";
+		}
+		//自杀方法
+		Ball.prototype.goDie = function(){
+			//让父亲删除自己的DOM
+			document.getElementById("box").removeChild(this.dom);
+			//在数组中删除自己
+			for (var i = 0; i < ballarr.length; i++) {
+				if(ballarr[i] === this){
+					//删除数组中第i项：
+					ballarr.splice(i , 1);
+				}
+			};
+		}
+
+		//这个数组中存放所有小球的实例
+		var ballarr = [];
+		setInterval(function(){
+			for (var i = 0; i < ballarr.length; i++) {
+				ballarr[i].update();
+			};
+		},20);
+
+		//添加一个监听
+		document.onmousemove = function(event){
+			var x = event.clientX;
+			var y = event.clientY;
+			new Ball(x , y , 40);
+		}
+	</script>
+</body>
+</html>
