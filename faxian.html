@@ -8,7 +8,11 @@
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/faxiancss.css">
     <style>
-
+        #dingbu{
+            position:fixed;
+            bottom:26px;
+            right:30px;
+        }
     </style>
 </head>
 
@@ -23,18 +27,18 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#">資源庫</a>
+                <a class="navbar-brand" href="index.html">回到首页</a>
             </div>
             <div id="navbar" class="navbar-collapse collapse">
                 <ul class="nav navbar-nav ylbg">
-                    <li class="txt" href="#active"><a href="index.html">回到首页</a></li>
+                    <li class="txt" href="#active"><a href="#">资源库</a></li>
                     <li class="txt"><a href="#about">Flex响应式</a></li>
-                    <li class="txt"><a href="#contact">Javascript</a></li>
-                    <li class="txt"><a href="#contact">JQuery</a></li>
-                    <li class="txt"><a href="#contact">bootstrap</a></li>
-                    <li class="txt"><a href="#contact">Vue</a></li>
-                    <li class="txt"><a href="#contact">html5/css3</a></li>
-                    <li class="txt"><a href="#contact"></a></li>
+                    <li class="txt"><a href="#1">DIV+CSS布局</a></li>
+                    <li class="txt"><a href="#2">JQuery</a></li>
+                    <li class="txt"><a href="#3">bootstrap</a></li>
+                    <li class="txt"><a href="#4">Vue</a></li>
+                    <li class="txt"><a href="#5">html5/css3</a></li>
+                    <li class="txt"><a href="#6">Ajax</a></li>
                     <span>开启音阶</span>
                 </ul>
             </div>
@@ -104,6 +108,7 @@
     </div>
     <!-- 轮播图结束区域 -->
     <!-- 图片内容区域 开始-->
+            <a href="" name="about"></a>
     <section class="info container">
         <div class="item col-lg-4 col-md-12">
             <a href="eraser.html"><img src="images/10.JPG
@@ -126,6 +131,7 @@
         </div>
     </section>
     <section class="container">
+        <a href="" name="1"></a>
         <div class="row">
             <div class="col-md-7 item">
                 <h2>精彩即将开始<span class="text-muted">
@@ -138,6 +144,7 @@
             <div class="col-md-5 rightinfo1 item">
             </div>
         </div>
+        <a href="" name="2"></a>
         <div class="row">
             <div class="col-md-5 rightinfo1 item">
             </div>
@@ -150,6 +157,7 @@
                 </p>
             </div>
         </div>
+        <a href="" name="3"></a>
         <div class="row">
             <div class="col-md-7 item">
                 <h2>精彩即将开始 <span class="text-muted">
@@ -167,8 +175,8 @@
         <p class="pull-left">
             &copy; lanc
         </p>
-        <p class="pull-right">
-            <a href="#">回到顶部</a>
+        <p class="pull-right" id="dingbu">
+            <a href="#" style="font-size: 18px">回到顶部</a>
         </p>
     </footer>
     <script src="js/jquery-1.12.4.js"></script>
