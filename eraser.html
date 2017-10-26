@@ -5,6 +5,9 @@
     <meta charset="UTF-8">
     <title>Document</title>
     <style>
+    body{
+        overflow: hidden;
+    }
     .box {
         position: relative;
         width: 700px;
@@ -87,20 +90,23 @@
     	text-decoration: none;
     }
 
-    .btn span.fanhui {
+ span.fanhui {
     	display: block;
-        position: relative;
-      /*float:left;*/
-        width: 66px;
-        height: 30px;
-        top: 50px;
-        right: 200px;
+        width: 100px;
+        height: 40px;
+        line-height:40px;
+        margin:20px 20px;
+        text-align: center;
         background:rgba(0,0,0,0.3);
+    }
+    span.fanhui a{
+
     }
     </style>
 </head>
 
 <body>
+ <span class="fanhui"><a href="faxian.html">返回首頁</a></span>
     <h1>jQuery橡皮擦插件jQuery.eraser演示</h1>
     <p><a href="http://www.sucaihuo.com">参考来源-->素材火 http://www.sucaihuo.com</a></p>
     <div class="box">
@@ -112,7 +118,7 @@
     <div class="btn">
         <span class="clear">清除</span>
         <span class="reset">复位</span>
-        <span class="fanhui"><a href="faxian.html">返回首頁</a></span>
+       
     </div>
     <script src="js/jquery-1.8.3.min.js"></script>
     <script src="js/jquery.eraser.js"></script>
