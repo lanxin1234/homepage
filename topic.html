@@ -11,7 +11,13 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" type="text/css" href="fonts/iconfont.css">
     <style>
-
+        body{
+            overflow:hidden;
+        }
+        #home{
+            font-size: 20px;
+            margin-right:420px;
+        }
     </style>
 </head>
 <style>
@@ -21,8 +27,12 @@
     <div class="top ">
         <div class="inner_c">
             <form class="navbar-form navbar-left" role="search">
-
+                    <a href="index.html" id="home">
+                         <span class="glyphicon glyphicon-home" aria-hidden="true"></span>
+                    <span> 回到首页</span>
+                    </a>
                 <div class="form-group ">
+
                     <input type="text" class="form-control" placeholder="搜索问题、话题或人"><span class="glyphicon glyphicon-search"></span>
                 </div>
                 <a href="#">
@@ -32,10 +42,7 @@
                     	 <span class="glyphicon glyphicon-comment huati" aria-hidden="true"></span>
                     <span > 话题</span>
                     </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <a href="index.html">
-                         <span class="glyphicon glyphicon-home" aria-hidden="true"></span>
-                    <span> 回到首页</span>
-                    </a>
+                    
             </form>
             <button type="button" class="btn btn-success">注册</button>
             <button type="button" class="btn btn-primary">登录</button>

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>文字动画</title>
+    <style type="text/css">
+    body {
+        overflow: hidden;
+    }
+
+    div.box {
+        float: left;
+        text-align: center;
+        width: 50%;
+        height: 400px;
+        margin-top: 20px;
+        margin-right: 40px;
+        perspective: 300px;
+        border: 1px solid #000;
+    }
+
+    div.box span {
+        float: left;
+        margin-right: 10px;
+        perspective: 300px;
+    }
+
+    div.box span b {
+        font-size: 36px;
+        display: block;
+        transform: translateZ(301px);
+        transition: all 1s ease 0s;
+    }
+
+    input {
+        float: left;
+        margin: 40px 20px;
+    }
+    .btn{
+        width:100%;
+        overflow: hidden;
+    }
+    div.box div.txt span:nth-child(1){
+        margin-left:18px;
+    }
+    .right{
+        float:right;
+        width:40%;
+        height:400px;
+        margin-right:50px;
+        margin-top:-66px;
+        border: 1px solid #000;
+    }
+    .xiaoqiu{
+        float:right;
+        position: relative;
+        left:-200px;
+        top:-70px;
+    }
+    button{
+        width:100px;
+        height:40px;
+        background:#f2f2f2;
+        margin-top:100px;
+        margin-left: 100px;
+    }
+
+    </style>
+</head>
+
+<body>
+    <a href="index.html"><h1>回到首页</h1></a>
+    <h1 class="txt">文字动画效果</h1>
+    <h1 class="xiaoqiu">炫彩小球动画效果</h1>
+    <div class="box">
+        <div class="btn">
+            <input type="button" value="点击文字进入" id="btn1" />
+            <input type="button" value="文字出场" id="btn2" />
+        </div>
+        <div class="txt">
+            <span><b style="color:red">纸</b></span>
+            <span><b style="color:green">上</b></span>
+            <span><b style="color:orange">得</b></span>
+            <span><b style="color:blue">来</b></span>
+            <span><b style="color:pink">终</b></span>
+            <span><b>觉</b></span>
+            <span><b style="color:#993366">浅</b></span>
+            <span><b>，</b></span>
+            <span><b style="color:#66CCCC">绝</b></span>
+            <span><b style="color:#CCFF66">知</b></span>
+            <span><b style="color:#FF9999">此</b></span>
+            <span><b style="color:#99CC66">事</b></span>
+            <span><b >要</b></span>
+            <span><b style="color:#FFFF66   ">躬</b></span>
+            <span><b style="color:#FF0033">行</b></span>
+            <span><b>！</b></span>
+        </div>
+    </div>
+    <div class="right">
+       <a href="ball.html"> <button>点击开始</button></a>
+    </div>
+</body>
+
+</html>
+<script type="text/javascript" src="js/jquery-1.12.4.js"></script>
+<script>
+//进场动画
+$("#btn1").click(function() {
+    $("b").each(function(i) {
+        $(this).css("transition-delay", i * 0.2 + "s");
+        $(this).css("transform", "translateZ(0)");
+    })
+
+});
+$("#btn2").click(function() {
+    $("b").each(function(i) {
+        $(this).css("transition-delay", i * 0.2 + "s");
+        $(this).css("transform", "translateZ(301px)");
+    });
+});
+// window.onload = function(){
+//    $("b").each(function(i) {
+//         $(this).css("transition-delay", i * 0.2 + "s");
+//         $(this).css("transform", "translateZ(0)");
+//     })
+// }
+
+</script>
